@@ -132,7 +132,7 @@ system_images:
   coredns: rancher/coredns-coredns:1.8.0
   coredns_autoscaler: rancher/cluster-proportional-autoscaler:1.8.1
   nodelocal: rancher/k8s-dns-node-cache:1.15.13
-  kubernetes: rancher/hyperkube:v1.20.4-rancher1
+  kubernetes: rancher/hyperkube:v1.26.8-rancher1
   flannel: rancher/coreos-flannel:v0.13.0-rancher1
   flannel_cni: rancher/flannel-cni:v0.3.0-rancher6
   calico_node: rancher/calico-node:v3.17.2
