@@ -1,0 +1,5 @@
+How will you test the changes?
+The changes will undergo testing in a non-production environment, such as a test cluster.
+
+How will you ensure the changes don't negatively affect your cluster?
+After applying the changes, I will test them in a non-production cluster and monitor the metrics using observability and monitoring tools like Prometheus and Grafana.

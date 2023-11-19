@@ -1,0 +1,19 @@
+1. Incident commander name:
+   Quang Ngo
+
+2. Executive Summary of what happened:
+   A malicious script executed by a hacker initiated three pods named moneropool, minergate, and cryptonight, utilizing the server's computational power for cryptocurrency mining. This significantly impacted the performance of other tasks.
+
+3. Summary of what was affected:
+   Pods hosting Falco, Prometheus, and Grafana were affected, as a portion of resources was diverted for cryptocurrency mining.
+
+4. Summary of the impact:
+   The cryptocurrency mining pods surged CPU and memory usage abruptly, leading to the crash of running pods due to the system's inability to handle the CPU peak.
+
+5. Summary of the remediation steps:
+  To address this, the following command was executed:
+   kubectl --kubeconfig kube_config_cluster.yml delete pod <pod_name> --grace-period=0 --force
+This is to ensure that all services are back up and running, normal and accessible.
+
+6. Summary of lessons learned:
+   Monitoring tools like Grafana are essential to detect anomalies promptly in the system.
